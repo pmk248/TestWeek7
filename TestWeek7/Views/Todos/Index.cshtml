@@ -1,0 +1,19 @@
+﻿@model IEnumerable<TestWeek7.Models.Todos>
+
+<h1>Todo List</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Todo</th>
+        <th>User ID</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.TodoText</td>
+            <td>@item.UserId</td>
+        </tr>
+    }
+</table>
+@* <a href="@Url.Action("Create")">Create New</a> *@
